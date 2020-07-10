@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>263472856241-5076uts4fqrh1qp071dcve81g7igoju6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.263472856241-5076uts4fqrh1qp071dcve81g7igoju6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCnZAuEzZ8q1983dI_IVaUoSAjr0RZXgi8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>263472856241</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.taiwanmobile.myTreat</string>
+	<key>PROJECT_ID</key>
+	<string>mytreat-cf59d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mytreat-cf59d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:263472856241:ios:4424843f9d7d7631e6b690</string>
+	<key>DATABASE_URL</key>
+	<string>https://mytreat-cf59d.firebaseio.com</string>
+</dict>
+</plist>
