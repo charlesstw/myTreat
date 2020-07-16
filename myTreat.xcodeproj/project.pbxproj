@@ -24,6 +24,8 @@
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
 		B5CEA31624C035CB00620D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */; };
 		B5CEA31724C035CB00620D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */; };
+		B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CEA31824C0389B00620D13 /* SearchBar.swift */; };
+		B5CEA31A24C0389B00620D13 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CEA31824C0389B00620D13 /* SearchBar.swift */; };
 		C9D714B5468013B51BA80853 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEA019768CF2C18E96B7EB5 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,7 @@
 		56A9E4C624B867F600E1EFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5CEA31824C0389B00620D13 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C55AB6744E20ED559F0B9EF7 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD326BFD6A202747CBBD5B69 /* Pods-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.release.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +151,7 @@
 				560F3A5A24B869EF00AAC0F6 /* JoinTreatView.swift */,
 				560F3A5E24B86FE800AAC0F6 /* Supporting File */,
 				56A9E4A024B867F600E1EFCA /* Assets.xcassets */,
+				B5CEA31824C0389B00620D13 /* SearchBar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -437,6 +441,7 @@
 			files = (
 				560F3A5824B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
+				B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */,
 				56A9E4C924B867F600E1EFCA /* ContentView.swift in Sources */,
 				56A9E4C724B867F600E1EFCA /* MyTreatApp.swift in Sources */,
 			);
@@ -448,6 +453,7 @@
 			files = (
 				560F3A5924B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				560F3A5C24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
+				B5CEA31A24C0389B00620D13 /* SearchBar.swift in Sources */,
 				56A9E4CA24B867F600E1EFCA /* ContentView.swift in Sources */,
 				56A9E4C824B867F600E1EFCA /* MyTreatApp.swift in Sources */,
 			);

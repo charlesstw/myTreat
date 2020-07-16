@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct CreateTreatView: View {
+    @State var searchText: String
+    
     var body: some View {
-        Text("Create")
+        VStack {
+            SearchBar(text: $searchText)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            Text("Filter: \(searchText)")
+            Spacer()
+        }
+        .background(Color.gray)
     }
 }
 
 struct CreateTreatView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateTreatView()
+        CreateTreatView(searchText: "")
     }
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
                     Image(systemName: "photo")
                     Text("被請客")
                 }
-                CreateTreatView().tabItem {
+                CreateTreatView(searchText: "").tabItem {
                     Image(systemName: "camera")
                     Text("我請客")
                 }
