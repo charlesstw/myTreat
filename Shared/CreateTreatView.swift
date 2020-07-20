@@ -16,6 +16,12 @@ struct CreateTreatView: View {
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             Text("Filter: \(searchText)")
             Spacer()
+            Button(action: {
+                print("start search")
+            }, label: {
+                Text("Start")
+                    .foregroundColor(.green)
+            })
         }
         .background(Color.gray)
     }
