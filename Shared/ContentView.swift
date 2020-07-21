@@ -9,16 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            TabView {                
-                JoinTreatView().tabItem {
-                    Image(systemName: "photo")
-                    Text("被請客")
-                }
-                CreateTreatView(searchText: "").tabItem {
-                    Image(systemName: "camera")
-                    Text("我請客")
-                }
+        TabView {
+            JoinTreatView().tabItem {
+                Image(systemName: "photo")
+                Text("被請客")
+            }
+            CreateTreatView(searchText: "").tabItem {
+                Image(systemName: "camera")
+                Text("我請客")
+            }
+            OrderListView().tabItem {
+                Image(systemName: "person.crop.circle")
+                Text("訂單清單")
             }
         }
     }
