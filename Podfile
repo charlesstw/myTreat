@@ -6,11 +6,16 @@ target 'iOS' do
   use_frameworks!
   pod 'Firebase', '~> 6.32.2'
   pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+  pod 'FirebaseUI/Phone'
   pod 'Firebase/AppDistribution'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Database'
   pod 'Firebase/DynamicLinks'
+
   pod 'Firebase/Messaging'
   # Pods for iOS
 

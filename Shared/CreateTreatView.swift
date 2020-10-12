@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct CreateTreatView: View {
     @State var searchText: String
+    @State var showingLogin = false
     
     var body: some View {
         VStack {
@@ -18,9 +20,15 @@ struct CreateTreatView: View {
             Spacer()
             Button(action: {
                 print("start login")
+                self.showingLogin.toggle()
             }, label: {
-                Text("login")
-                    .foregroundColor(.green)
+                Image(systemName: "person.circle.fill")
+                Text("登入")
+                    
+            })
+            .foregroundColor(.white)
+            .sheet(isPresented: $showingLogin, content: {
+                LoginView()
             })
             Spacer()
         }
