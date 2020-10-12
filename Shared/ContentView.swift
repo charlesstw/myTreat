@@ -18,10 +18,6 @@ struct ContentView: View {
                 Image(systemName: "camera")
                 Text("我請客")
             }
-            OrderListView().tabItem {
-                Image(systemName: "person.crop.circle")
-                Text("訂單清單")
-            }
         }
     }
 }

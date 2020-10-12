@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49023D2024C6E2460055D954 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49023D1F24C6E2460055D954 /* OrderListView.swift */; };
-		49023D2124C6E2460055D954 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49023D1F24C6E2460055D954 /* OrderListView.swift */; };
 		560F3A5824B869DF00AAC0F6 /* CreateTreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F3A5724B869DF00AAC0F6 /* CreateTreatView.swift */; };
 		560F3A5924B869DF00AAC0F6 /* CreateTreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F3A5724B869DF00AAC0F6 /* CreateTreatView.swift */; };
 		560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F3A5A24B869EF00AAC0F6 /* JoinTreatView.swift */; };
@@ -50,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		431AF72100DC69196F6E4AAE /* Pods_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49023D1F24C6E2460055D954 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		4B0CAFEA094B2C3C37993748 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4BEA019768CF2C18E96B7EB5 /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		560F3A5724B869DF00AAC0F6 /* CreateTreatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTreatView.swift; sourceTree = "<group>"; };
@@ -152,7 +149,6 @@
 				56A9E49F24B867F400E1EFCA /* ContentView.swift */,
 				560F3A5724B869DF00AAC0F6 /* CreateTreatView.swift */,
 				560F3A5A24B869EF00AAC0F6 /* JoinTreatView.swift */,
-				49023D1F24C6E2460055D954 /* OrderListView.swift */,
 				560F3A5E24B86FE800AAC0F6 /* Supporting File */,
 				56A9E4A024B867F600E1EFCA /* Assets.xcassets */,
 				B5CEA31824C0389B00620D13 /* SearchBar.swift */,
@@ -448,7 +444,6 @@
 				B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */,
 				56A9E4C924B867F600E1EFCA /* ContentView.swift in Sources */,
 				56A9E4C724B867F600E1EFCA /* MyTreatApp.swift in Sources */,
-				49023D2024C6E2460055D954 /* OrderListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +456,6 @@
 				B5CEA31A24C0389B00620D13 /* SearchBar.swift in Sources */,
 				56A9E4CA24B867F600E1EFCA /* ContentView.swift in Sources */,
 				56A9E4C824B867F600E1EFCA /* MyTreatApp.swift in Sources */,
-				49023D2124C6E2460055D954 /* OrderListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

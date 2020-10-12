@@ -17,11 +17,12 @@ struct CreateTreatView: View {
             Text("Filter: \(searchText)")
             Spacer()
             Button(action: {
-                print("start search")
+                print("start login")
             }, label: {
-                Text("Start")
+                Text("login")
                     .foregroundColor(.green)
             })
+            Spacer()
         }
         .background(Color.gray)
     }
