@@ -30,6 +30,8 @@
 		B5E383FB2534074A0070D680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E383F92534074A0070D680 /* LoginView.swift */; };
 		B5E3840D253425100070D680 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3840C253425100070D680 /* LoginManager.swift */; };
 		B5E3840E253425100070D680 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3840C253425100070D680 /* LoginManager.swift */; };
+		B5E3841B25357F360070D680 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3841A25357F360070D680 /* AlertItem.swift */; };
+		B5E3841C25357F360070D680 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3841A25357F360070D680 /* AlertItem.swift */; };
 		C9D714B5468013B51BA80853 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEA019768CF2C18E96B7EB5 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,7 @@
 		B5CEA31824C0389B00620D13 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B5E383F92534074A0070D680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B5E3840C253425100070D680 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		B5E3841A25357F360070D680 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		C55AB6744E20ED559F0B9EF7 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD326BFD6A202747CBBD5B69 /* Pods-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.release.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,7 @@
 		56A9E49824B867F400E1EFCA = {
 			isa = PBXGroup;
 			children = (
+				B5E3841925357F270070D680 /* Common */,
 				B5E3840B253425050070D680 /* ServiceManager */,
 				56A9E49D24B867F400E1EFCA /* Shared */,
 				56A9E4A724B867F600E1EFCA /* iOS */,
@@ -216,6 +220,14 @@
 				B5E3840C253425100070D680 /* LoginManager.swift */,
 			);
 			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		B5E3841925357F270070D680 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3841A25357F360070D680 /* AlertItem.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EDA03E7E53FFCD2C2BCFCF44 /* Frameworks */ = {
@@ -474,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E383FA2534074A0070D680 /* LoginView.swift in Sources */,
+				B5E3841B25357F360070D680 /* AlertItem.swift in Sources */,
 				560F3A5824B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				B5E3840D253425100070D680 /* LoginManager.swift in Sources */,
 				560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
@@ -488,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E383FB2534074A0070D680 /* LoginView.swift in Sources */,
+				B5E3841C25357F360070D680 /* AlertItem.swift in Sources */,
 				560F3A5924B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				B5E3840E253425100070D680 /* LoginManager.swift in Sources */,
 				560F3A5C24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
