@@ -11,9 +11,9 @@ import FirebaseAuth
 
 class LoginManager: NSObject {
     static let shared = LoginManager()
-    
+
     private override init() {
-        super.init()
+        super.init()        
     }
     
     func isLogined() -> Bool {

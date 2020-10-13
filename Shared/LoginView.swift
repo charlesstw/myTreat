@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-
+import Resolver
 struct LoginView: View {
     @State private var emailString = ""
     @State private var passwordString = ""
     @State private var showPwd = false
     @State private var showLogoutAlert = false
-    let loginManager = LoginManager.shared
+    let loginManager: LoginManager = ResolverManager.shared.resolver.resolve()
     @State var alertItem: AlertItem?
     
     var isCanLogin: Bool {

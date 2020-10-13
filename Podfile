@@ -15,8 +15,8 @@ target 'iOS' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Database'
   pod 'Firebase/DynamicLinks'
-
   pod 'Firebase/Messaging'
+  pod 'Resolver', '~> 1.1.4'
   # Pods for iOS
 
 end
