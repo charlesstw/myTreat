@@ -18,7 +18,7 @@ struct CustomButton: ViewModifier {
             .disabled(!isEnable)
             .cornerRadius(10)
             .padding()
-            
+            .animation(.linear)
     }
     
 }
