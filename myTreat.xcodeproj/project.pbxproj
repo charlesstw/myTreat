@@ -24,6 +24,7 @@
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
 		B52E66B7253E776A006B0D03 /* LoginManager+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */; };
 		B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */; };
+		B52E66C7253E956C006B0D03 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66C6253E956C006B0D03 /* CustomButton.swift */; };
 		B5CEA31624C035CB00620D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */; };
 		B5CEA31724C035CB00620D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */; };
 		B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CEA31824C0389B00620D13 /* SearchBar.swift */; };
@@ -78,6 +79,7 @@
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginManager+Injection.swift"; sourceTree = "<group>"; };
 		B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTreatApp+Injection.swift"; sourceTree = "<group>"; };
+		B52E66C6253E956C006B0D03 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B5CEA31524C035CB00620D13 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5CEA31824C0389B00620D13 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B5E383F92534074A0070D680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				56A9E4A024B867F600E1EFCA /* Assets.xcassets */,
 				B5CEA31824C0389B00620D13 /* SearchBar.swift */,
 				B5E383F92534074A0070D680 /* LoginView.swift */,
+				B52E66C6253E956C006B0D03 /* CustomButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				B52E66B7253E776A006B0D03 /* LoginManager+Injection.swift in Sources */,
 				560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
 				B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */,
+				B52E66C7253E956C006B0D03 /* CustomButton.swift in Sources */,
 				B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */,
 				56A9E4C924B867F600E1EFCA /* ContentView.swift in Sources */,
 				56A9E4C724B867F600E1EFCA /* MyTreatApp.swift in Sources */,

@@ -34,9 +34,8 @@ struct LoginView: View {
 
                 return Alert(title: Text("登出成功"))
             })
-            .frame(width: 100, height: 45, alignment: .center)
-            .cornerRadius(10)
-            .padding()
+            .modifier(CustomButton())
+            .deleteDisabled(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
         } else {
             VStack {
                 HStack {
@@ -87,11 +86,7 @@ struct LoginView: View {
                 .alert(item: $alertItem, content: { (alertItem) -> Alert in
                     return Alert(title: Text("\(alertItem.title)"), dismissButton: alertItem.dismissButton)
                 })
-                .frame(width: 100, height: 45, alignment: .center)
-                .background(isCanLogin ? Color.blue : Color.gray)
-                .disabled(!isCanLogin)
-                .cornerRadius(10)
-                .padding()
+                .modifier(CustomButton(isEnable: isCanLogin))
 
                 // 註冊按鈕
                 Button(action: {
@@ -108,19 +103,16 @@ struct LoginView: View {
                 .alert(item: $alertItem, content: { (alertItem) -> Alert in
                     return Alert(title: Text("\(alertItem.title)"), dismissButton: alertItem.dismissButton)
                 })
-                .frame(width: 100, height: 45, alignment: .center)
-                .background(isCanLogin ? Color.green : Color.gray)
-                .disabled(!isCanLogin)
-                .cornerRadius(10)
-                .padding()
+                .modifier(CustomButton(isEnable: isCanLogin))
 
                 // 重設按鈕
                 Button(action: {
 
                 }, label: {
                     Text("重設密碼")
+                        .foregroundColor(.white)
                 })
-                .padding()
+                .modifier(CustomButton(isEnable: isCanLogin))
             }
             .padding(.top, 100)
             .padding(.leading)
