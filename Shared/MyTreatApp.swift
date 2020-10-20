@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import Resolver
 
 @main
 struct MyTreatApp: App {
@@ -26,3 +27,5 @@ struct myTreatApp_Previews: PreviewProvider {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
+
+

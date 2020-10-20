@@ -12,7 +12,7 @@ struct LoginView: View {
     @State private var passwordString = ""
     @State private var showPwd = false
     @State private var showLogoutAlert = false
-    let loginManager: LoginManager = ResolverManager.shared.resolver.resolve()
+    @Injected var loginManager: LoginManager
     @State var alertItem: AlertItem?
     
     var isCanLogin: Bool {
