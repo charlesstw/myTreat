@@ -40,6 +40,8 @@
 		B5E3840E253425100070D680 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3840C253425100070D680 /* LoginManager.swift */; };
 		B5E3841B25357F360070D680 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3841A25357F360070D680 /* AlertItem.swift */; };
 		B5E3841C25357F360070D680 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3841A25357F360070D680 /* AlertItem.swift */; };
+		B5EF9CDA2541617B0094C650 /* StoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF9CD92541617B0094C650 /* StoreRow.swift */; };
+		B5EF9CDB2541617B0094C650 /* StoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF9CD92541617B0094C650 /* StoreRow.swift */; };
 		C9D714B5468013B51BA80853 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEA019768CF2C18E96B7EB5 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,7 @@
 		B5E383F92534074A0070D680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B5E3840C253425100070D680 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		B5E3841A25357F360070D680 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		B5EF9CD92541617B0094C650 /* StoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRow.swift; sourceTree = "<group>"; };
 		C55AB6744E20ED559F0B9EF7 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD326BFD6A202747CBBD5B69 /* Pods-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.release.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E3841A25357F360070D680 /* AlertItem.swift */,
+				B5EF9CD92541617B0094C650 /* StoreRow.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -530,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E383FA2534074A0070D680 /* LoginView.swift in Sources */,
+				B5EF9CDA2541617B0094C650 /* StoreRow.swift in Sources */,
 				B5E3841B25357F360070D680 /* AlertItem.swift in Sources */,
 				560F3A5824B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				B5E3840D253425100070D680 /* LoginManager.swift in Sources */,
@@ -552,6 +557,7 @@
 			files = (
 				B5E383FB2534074A0070D680 /* LoginView.swift in Sources */,
 				B5E3841C25357F360070D680 /* AlertItem.swift in Sources */,
+				B5EF9CDB2541617B0094C650 /* StoreRow.swift in Sources */,
 				560F3A5924B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
 				56D1239925404DAE00DEA023 /* Campaign.swift in Sources */,
 				B5E3840E253425100070D680 /* LoginManager.swift in Sources */,

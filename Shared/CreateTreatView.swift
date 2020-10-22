@@ -11,9 +11,9 @@ import SwiftUI
 struct CreateTreatView: View {
     @State var searchText: String
     @State var showingLogin = false
+    var stores = StoreRow.all()
     
     var body: some View {
-        
             NavigationView {
                 VStack {
                     HStack {
@@ -27,15 +27,30 @@ struct CreateTreatView: View {
                             Text("登入")
                                 
                         })
-                        .foregroundColor(.white)
+                        .foregroundColor(.green)
                         .sheet(isPresented: $showingLogin, content: {
                             LoginView()
                         })
                     }
-                    Spacer()
-                    NavigationLink(destination: CreateOrderView()) {
-                              Text("todo:店家cell，進入建立表單頁")
-                          }
+                    ScrollView(.vertical) {
+                        let columns = [GridItem(), GridItem()]
+                        LazyVGrid(columns: columns) {
+                            ForEach(stores) { store in
+                                NavigationLink(destination: CreateOrderView()) {
+                                    VStack {
+                                        Image(systemName: store.imageName)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 100, height: 100)
+                                            .clipped()
+                                            .background(Color.yellow)
+                                        Text(store.name)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                                       
                     Spacer()
                 }
                 .padding()
