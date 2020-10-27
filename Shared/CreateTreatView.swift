@@ -33,7 +33,7 @@ struct CreateTreatView: View {
                         })
                     }
                     ScrollView(.vertical) {
-                        let columns = [GridItem(), GridItem()]
+                        let columns = [GridItem(.flexible()), GridItem(.flexible())]
                         LazyVGrid(columns: columns) {
                             ForEach(stores) { store in
                                 NavigationLink(destination: CreateOrderView()) {
@@ -41,16 +41,16 @@ struct CreateTreatView: View {
                                         Image(systemName: store.imageName)
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 100, height: 100)
+                                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
                                             .clipped()
                                             .background(Color.yellow)
-                                        Text(store.name)
+                                        Text(store.name)            
                                     }
                                 }
                             }
                         }
                     }
-                                       
+                       
                     Spacer()
                 }
                 .padding()

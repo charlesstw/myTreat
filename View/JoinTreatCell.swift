@@ -30,6 +30,6 @@ struct JoinTreatCell: View {
 
 struct JoinTreatCell_Previews: PreviewProvider {
     static var previews: some View {
-        JoinTreatCell(campaign: Campaign())
+        JoinTreatCell(campaign: Campaign(storeId: "1", store: "1", sponsor: "1", status: "1", description: "1", imageUrl: "1"))
     }
 }
