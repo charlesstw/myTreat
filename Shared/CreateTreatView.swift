@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CreateTreatView: View {
     @State var searchText: String
-    @State var showingLogin = false
+    @State var showingLogin: Int? = nil
     var stores = StoreRow.all()
     
     var body: some View {
@@ -21,16 +21,16 @@ struct CreateTreatView: View {
                             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                         Button(action: {
                             print("start login")
-                            self.showingLogin.toggle()
+                            self.showingLogin = 1
                         }, label: {
                             Image(systemName: "person.circle.fill")
                             Text("登入")
-                                
                         })
                         .foregroundColor(.green)
-                        .sheet(isPresented: $showingLogin, content: {
-                            LoginView()
-                        })
+                        
+                        NavigationLink(destination: LoginView(), tag: 1, selection: $showingLogin) {
+                            EmptyView()
+                          }
                     }
                     ScrollView(.vertical) {
                         let columns = [GridItem(.flexible()), GridItem(.flexible())]
@@ -44,7 +44,7 @@ struct CreateTreatView: View {
                                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
                                             .clipped()
                                             .background(Color.yellow)
-                                        Text(store.name)            
+                                        Text(store.name)
                                     }
                                 }
                             }

@@ -14,29 +14,13 @@ struct LoginView: View {
     @State private var showLogoutAlert = false
     @Injected var loginManager: LoginManager
     @State var alertItem: AlertItem?
+    @State var registerTag: Int? = nil
     
     var isCanLogin: Bool {
         emailString.count > 0 && passwordString.count > 0
     }
     
     var body: some View {
-        if loginManager.isLogined() {
-            // 登出按鈕
-            Button(action: {
-                print("signout")
-                loginManager.signOutProcess()
-                self.showLogoutAlert.toggle()
-            }, label: {
-                Text("登出")
-                .foregroundColor(.white)
-            })
-            .alert(isPresented: $showLogoutAlert, content: {
-
-                return Alert(title: Text("登出成功"))
-            })
-            .modifier(CustomButton())
-            .deleteDisabled(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
-        } else {
             VStack {
                 HStack {
                     Image(systemName: "person")
@@ -90,37 +74,31 @@ struct LoginView: View {
 
                 // 註冊按鈕
                 Button(action: {
-                    // TODO:present register
-                    loginManager.createAccount(account: self.emailString, password: self.passwordString) { (error) in
-                        if let error = error {
-                            self.alertItem = AlertItem(title: Text(error.localizedDescription), dismissButton: .default(Text("確認")))
-                        }
-                    }
+                    self.registerTag = 2
                 }, label: {
                     Text("註冊")
                         .foregroundColor(.white)
                 })
-                .alert(item: $alertItem, content: { (alertItem) -> Alert in
-                    return Alert(title: Text("\(alertItem.title)"), dismissButton: alertItem.dismissButton)
-                })
-                .modifier(CustomButton(isEnable: isCanLogin))
+                .modifier(CustomButton(isEnable: true))
 
+                NavigationLink(destination: RegisterView(), tag: 2, selection: $registerTag) {
+                    EmptyView()
+                }
+                
                 // 重設按鈕
                 Button(action: {
-
+                    self.registerTag = 3
                 }, label: {
                     Text("重設密碼")
                         .foregroundColor(.white)
                 })
-                .modifier(CustomButton(isEnable: isCanLogin))
+                .modifier(CustomButton(isEnable: true))
+                
+                NavigationLink(destination: ResetPasswordView(), tag: 3, selection: $registerTag) {
+                    EmptyView()
+                }
             }
-            .padding(.top, 100)
-            .padding(.leading)
-            .padding(.trailing)
-        }
-        
     }
-    
 }
 
 struct LoginView_Previews: PreviewProvider {
