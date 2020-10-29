@@ -17,6 +17,7 @@ target 'iOS' do
   pod 'Firebase/DynamicLinks'
   pod 'Firebase/Messaging'
   pod 'Resolver', '~> 1.1.4'
+  pod 'SDWebImageSwiftUI'
   # Pods for iOS
 
 end
