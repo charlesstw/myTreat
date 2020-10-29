@@ -38,7 +38,7 @@ struct CreateTreatView: View {
                             ForEach(stores) { store in
                                 NavigationLink(destination: CreateOrderView()) {
                                     VStack {
-                                        Image(systemName: store.imageName)
+                                        Image(store.imageName)
                                             .resizable()
                                             .scaledToFit()
                                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)

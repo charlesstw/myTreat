@@ -15,9 +15,10 @@ struct StoreRow: Identifiable {
 
 extension StoreRow {
     static func all() -> [StoreRow] {
-        return [StoreRow(name: "CoCo", imageName: "trash"),
-                StoreRow(name: "50 lan", imageName: "trash.fill"),
-                StoreRow(name: "Sunbay", imageName: "trash.slash"),
-                StoreRow(name: "kebuke", imageName: "trash.slash.fill")]
+        return [StoreRow(name: "山焙", imageName: "sunbay"),                
+                StoreRow(name: "Cama", imageName: "cama"),
+                StoreRow(name: "CoCo", imageName: "coco"),
+                StoreRow(name: "可不可熟成紅茶", imageName: "kebuke"),
+                StoreRow(name: "方最", imageName: "fanzui")]
     }
 }
