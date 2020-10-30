@@ -13,6 +13,10 @@
 		560F3A5C24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F3A5A24B869EF00AAC0F6 /* JoinTreatView.swift */; };
 		560F3A6024B86FFB00AAC0F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 560F3A5F24B86FFB00AAC0F6 /* GoogleService-Info.plist */; };
 		560F3A6124B86FFB00AAC0F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 560F3A5F24B86FFB00AAC0F6 /* GoogleService-Info.plist */; };
+		565BEFE5254AC71C001576D0 /* JoinTreatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEFE4254AC71C001576D0 /* JoinTreatCell.swift */; };
+		565BEFE6254AC71C001576D0 /* JoinTreatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEFE4254AC71C001576D0 /* JoinTreatCell.swift */; };
+		565BEFF7254AC769001576D0 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEFF6254AC769001576D0 /* OrderView.swift */; };
+		565BEFF8254AC769001576D0 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEFF6254AC769001576D0 /* OrderView.swift */; };
 		56A9E4BA24B867F600E1EFCA /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9E4B924B867F600E1EFCA /* Tests_iOS.swift */; };
 		56A9E4C524B867F600E1EFCA /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9E4C424B867F600E1EFCA /* Tests_macOS.swift */; };
 		56A9E4C724B867F600E1EFCA /* MyTreatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9E49E24B867F400E1EFCA /* MyTreatApp.swift */; };
@@ -21,8 +25,6 @@
 		56A9E4CA24B867F600E1EFCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9E49F24B867F400E1EFCA /* ContentView.swift */; };
 		56A9E4CB24B867F600E1EFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A9E4A024B867F600E1EFCA /* Assets.xcassets */; };
 		56A9E4CC24B867F600E1EFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A9E4A024B867F600E1EFCA /* Assets.xcassets */; };
-		56D1238C25404BD000DEA023 /* JoinTreatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1238B25404BD000DEA023 /* JoinTreatCell.swift */; };
-		56D1238D25404BD000DEA023 /* JoinTreatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1238B25404BD000DEA023 /* JoinTreatCell.swift */; };
 		56D1239825404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		56D1239925404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
@@ -73,6 +75,8 @@
 		560F3A5724B869DF00AAC0F6 /* CreateTreatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTreatView.swift; sourceTree = "<group>"; };
 		560F3A5A24B869EF00AAC0F6 /* JoinTreatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTreatView.swift; sourceTree = "<group>"; };
 		560F3A5F24B86FFB00AAC0F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		565BEFE4254AC71C001576D0 /* JoinTreatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTreatCell.swift; sourceTree = "<group>"; };
+		565BEFF6254AC769001576D0 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		56A9E49E24B867F400E1EFCA /* MyTreatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatApp.swift; sourceTree = "<group>"; };
 		56A9E49F24B867F400E1EFCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56A9E4A024B867F600E1EFCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +91,6 @@
 		56A9E4C024B867F600E1EFCA /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A9E4C424B867F600E1EFCA /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		56A9E4C624B867F600E1EFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56D1238B25404BD000DEA023 /* JoinTreatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTreatCell.swift; sourceTree = "<group>"; };
 		56D1239725404DAE00DEA023 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginManager+Injection.swift"; sourceTree = "<group>"; };
@@ -162,16 +165,33 @@
 			path = "Supporting File";
 			sourceTree = "<group>";
 		};
+		565BEFE2254AC71C001576D0 /* JoinTreat */ = {
+			isa = PBXGroup;
+			children = (
+				565BEFE3254AC71C001576D0 /* View */,
+			);
+			path = JoinTreat;
+			sourceTree = "<group>";
+		};
+		565BEFE3254AC71C001576D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				565BEFE4254AC71C001576D0 /* JoinTreatCell.swift */,
+				565BEFF6254AC769001576D0 /* OrderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		56A9E49824B867F400E1EFCA = {
 			isa = PBXGroup;
 			children = (
 				B5E0C34B254A5F68004D8CC5 /* Resources.xcassets */,
 				B52E66B5253E7720006B0D03 /* Injection */,
 				B5E3841925357F270070D680 /* Common */,
+				565BEFE2254AC71C001576D0 /* JoinTreat */,
 				56D1239625404D9400DEA023 /* Model */,
 				B5E3840B253425050070D680 /* ServiceManager */,
 				56A9E49D24B867F400E1EFCA /* Shared */,
-				56D1238A25404BAB00DEA023 /* View */,
 				56A9E4A724B867F600E1EFCA /* iOS */,
 				56A9E4AE24B867F600E1EFCA /* macOS */,
 				56A9E4B824B867F600E1EFCA /* Tests iOS */,
@@ -245,14 +265,6 @@
 				56A9E4C624B867F600E1EFCA /* Info.plist */,
 			);
 			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
-		56D1238A25404BAB00DEA023 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				56D1238B25404BD000DEA023 /* JoinTreatCell.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		56D1239625404D9400DEA023 /* Model */ = {
@@ -550,14 +562,15 @@
 				B5EF9CDA2541617B0094C650 /* StoreRow.swift in Sources */,
 				B5E3841B25357F360070D680 /* AlertItem.swift in Sources */,
 				560F3A5824B869DF00AAC0F6 /* CreateTreatView.swift in Sources */,
+				565BEFF7254AC769001576D0 /* OrderView.swift in Sources */,
 				B5E3840D253425100070D680 /* LoginManager.swift in Sources */,
 				B52E66B7253E776A006B0D03 /* LoginManager+Injection.swift in Sources */,
+				565BEFE5254AC71C001576D0 /* JoinTreatCell.swift in Sources */,
 				560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
 				B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */,
 				B52E674C253EDA28006B0D03 /* CreateOrderView.swift in Sources */,
 				B52E66C7253E956C006B0D03 /* CustomButton.swift in Sources */,
 				56D1239825404DAE00DEA023 /* Campaign.swift in Sources */,
-				56D1238C25404BD000DEA023 /* JoinTreatCell.swift in Sources */,
 				B5E0C34625490409004D8CC5 /* RealtimeDBService.swift in Sources */,
 				B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */,
 				B5E0C3342547F011004D8CC5 /* RegisterView.swift in Sources */,
@@ -579,8 +592,9 @@
 				B5E3840E253425100070D680 /* LoginManager.swift in Sources */,
 				560F3A5C24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
 				B5CEA31A24C0389B00620D13 /* SearchBar.swift in Sources */,
-				56D1238D25404BD000DEA023 /* JoinTreatCell.swift in Sources */,
 				56A9E4CA24B867F600E1EFCA /* ContentView.swift in Sources */,
+				565BEFF8254AC769001576D0 /* OrderView.swift in Sources */,
+				565BEFE6254AC71C001576D0 /* JoinTreatCell.swift in Sources */,
 				56A9E4C824B867F600E1EFCA /* MyTreatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

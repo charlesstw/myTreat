@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 struct JoinTreatCell: View {
     @State var campaign: Campaign
     var body: some View {
-        NavigationLink(destination: CreateOrderView()) {
+        NavigationLink(destination: OrderView(campaign: campaign)) {
             HStack {
                 WebImage(url: URL(string: campaign.imageUrl))
                     .resizable()
