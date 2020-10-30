@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-
+import SDWebImageSwiftUI
 
 struct CreateTreatView: View {
     @State var searchText: String
     @State var showingLogin: Int? = nil
     var stores = StoreRow.all()
-    
+    @ObservedObject var dbService: RealtimeDBService = RealtimeDBService()
     var body: some View {
+        
             NavigationView {
                 VStack {
                     HStack {
@@ -32,19 +33,21 @@ struct CreateTreatView: View {
                             EmptyView()
                           }
                     }
+                    
                     ScrollView(.vertical) {
                         let columns = [GridItem(.flexible()), GridItem(.flexible())]
                         LazyVGrid(columns: columns) {
-                            ForEach(stores) { store in
+                            
+                            ForEach(dbService.list) { store in
                                 NavigationLink(destination: CreateOrderView()) {
                                     VStack {
-                                        Image(store.imageName)
+                                        WebImage(url: URL(string: store.imageUrl))
                                             .resizable()
                                             .scaledToFit()
                                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
                                             .clipped()
-                                            .background(Color.yellow)
-                                        Text(store.name)
+                                            .background(Color.yellow)                                    
+                                        Text(store.storeName)
                                     }
                                 }
                             }

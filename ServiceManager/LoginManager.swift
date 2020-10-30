@@ -13,7 +13,9 @@ class LoginManager: NSObject {
     static let shared = LoginManager()
 
     private override init() {
-        super.init()        
+        super.init()
+        let database = RealtimeDBService()
+        database.observeStoreInfoChanged()
     }
     
     func isLogined() -> Bool {
