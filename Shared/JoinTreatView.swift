@@ -10,14 +10,11 @@ import SwiftUI
 struct JoinTreatView: View {
     var body: some View {
         NavigationView {
-            List {
-                ForEach(testCampaigns, id: \.storeId) { campaign in
-                    JoinTreatCell(campaign: campaign)
-                }
+            List(testCampaigns, id: \.id) { campaign in
+                JoinTreatCell(campaign: campaign)
             }
             .navigationTitle("點起來")
-        }
-        
+        }        
     }
 }
 
