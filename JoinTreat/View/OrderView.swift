@@ -10,36 +10,54 @@ import SDWebImageSwiftUI
 
 struct OrderView: View {
     var campaign: Campaign
+    @State var isOrdering: Bool = false
+    @State var currentProduct: Product? = nil
     var body: some View {
-
-        List {
-            HStack {
-                WebImage(url: URL(string: campaign.store.imageUrl))
-                    .resizable()
-                    .frame(width: 150, height: 150, alignment: .leading)
-                    .cornerRadius(50)
-
-                VStack(alignment: .leading) {
-                    Text("店名: \(campaign.store.name)")
-                    Text("發起人: \(campaign.sponsor)")
-                    Text("\(campaign.description)")
-
+        ZStack(alignment: .bottom) {
+            List {
+                OrderHeaderView(campaign: campaign)
+                ForEach(campaign.store.products, id: \.id) { product in
+                    ProductCell(product: product)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            if !isOrdering {
+                                isOrdering.toggle()
+                                currentProduct = product
+                                print("isOrder \(isOrdering)")
+                                print("Selected \(product.name)")
+                            }
+                        }
                 }
-                Spacer()
-            }.onTapGesture {
-                print("ttt11")
             }
-            ForEach(campaign.store.products, id: \.id) { product in
-                ProductCell(product: product)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        print("tap")
-                    }
-
+            .navigationTitle(campaign.name)
+            
+            if let currentProduct = currentProduct, isOrdering {
+                SelectProductView(product: currentProduct, isOrdering: $isOrdering)
+                    .background(Color(UIColor.darkGray))
+                    .cornerRadius(10)
+                    .padding(10)
             }
         }
-        .navigationTitle("")
+    }
+}
 
+struct OrderHeaderView: View {
+    var campaign: Campaign
+    var body: some View {
+        HStack {
+            WebImage(url: URL(string: campaign.store.imageUrl))
+                .resizable()
+                .frame(width: 150, height: 150, alignment: .leading)
+                .cornerRadius(50)
+
+            VStack(alignment: .leading) {
+                Text("店名: \(campaign.store.name)")
+                Text("發起人: \(campaign.sponsor)")
+                Text("\(campaign.description)")
+
+            }
+            Spacer()
+        }
     }
 }
 
