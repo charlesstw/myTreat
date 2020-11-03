@@ -34,8 +34,7 @@ class RealtimeDBService: NSObject, ObservableObject {
     }
     
     func addStoreItem(storebean: StoreBean) {
-        let childRef = self.storeRef.childByAutoId() // 隨機生成的節點唯一識別碼，用來當儲存時的key值
-        let storeItemReference = self.storeRef.child(childRef.key!)
+        let storeItemReference = self.storeRef.child(storebean.storeName)
         
         let storeItem: [String : Any] = [StoreKey.dpo.rawValue: storebean.dpo,
                                          StoreKey.storeName.rawValue: storebean.storeName,
@@ -94,7 +93,7 @@ extension RealtimeDBService {
     
     private func test() {
         addStoreItem(storebean: StoreBean(dpo: 1, storeName: "Coco", storeAddress: "Taipei", imageUrl: "https://scontent.ftpe12-1.fna.fbcdn.net/v/t1.0-9/26001219_1485937951526238_5325475773728439932_n.png?_nc_cat=107&ccb=2&_nc_sid=85a577&_nc_ohc=oUSTk38i9O4AX_L1vJx&_nc_ht=scontent.ftpe12-1.fna&oh=fb7b38c422faa4cf762d0fa033889a79&oe=5FC0639D"))
-        addStoreItem(storebean: StoreBean(dpo: 1, storeName: "Coco", storeAddress: "Taipei", imageUrl: "https://scontent.ftpe12-1.fna.fbcdn.net/v/t1.0-9/26001219_1485937951526238_5325475773728439932_n.png?_nc_cat=107&ccb=2&_nc_sid=85a577&_nc_ohc=oUSTk38i9O4AX_L1vJx&_nc_ht=scontent.ftpe12-1.fna&oh=fb7b38c422faa4cf762d0fa033889a79&oe=5FC0639D"))
-        addStoreItem(storebean: StoreBean(dpo: 1, storeName: "Coco", storeAddress: "Taipei", imageUrl: "https://scontent.ftpe12-1.fna.fbcdn.net/v/t1.0-9/26001219_1485937951526238_5325475773728439932_n.png?_nc_cat=107&ccb=2&_nc_sid=85a577&_nc_ohc=oUSTk38i9O4AX_L1vJx&_nc_ht=scontent.ftpe12-1.fna&oh=fb7b38c422faa4cf762d0fa033889a79&oe=5FC0639D"))
+        addStoreItem(storebean: StoreBean(dpo: 1, storeName: "方最", storeAddress: "Taipei", imageUrl: "https://scontent.ftpe12-1.fna.fbcdn.net/v/t1.0-9/26001219_1485937951526238_5325475773728439932_n.png?_nc_cat=107&ccb=2&_nc_sid=85a577&_nc_ohc=oUSTk38i9O4AX_L1vJx&_nc_ht=scontent.ftpe12-1.fna&oh=fb7b38c422faa4cf762d0fa033889a79&oe=5FC0639D"))
+        addStoreItem(storebean: StoreBean(dpo: 1, storeName: "Cama", storeAddress: "Taipei", imageUrl: "https://scontent.ftpe12-1.fna.fbcdn.net/v/t1.0-9/26001219_1485937951526238_5325475773728439932_n.png?_nc_cat=107&ccb=2&_nc_sid=85a577&_nc_ohc=oUSTk38i9O4AX_L1vJx&_nc_ht=scontent.ftpe12-1.fna&oh=fb7b38c422faa4cf762d0fa033889a79&oe=5FC0639D"))
     }
 }
