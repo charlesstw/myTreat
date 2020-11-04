@@ -22,8 +22,10 @@ struct OrderView: View {
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 if !isOrdering {
-                                    isOrdering.toggle()
                                     currentProduct = product
+                                    withAnimation(.spring()) { 
+                                        isOrdering.toggle()
+                                    }
                                     print("isOrder \(isOrdering)")
                                     print("Selected \(product.name)")
                                 }
@@ -37,9 +39,8 @@ struct OrderView: View {
                                minHeight: 44,
                                maxHeight: 44,
                                alignment: .center)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
+                        .background(Color.white)
+                        .foregroundColor(.black)
                 }                
             }
             .navigationTitle(campaign.name)
@@ -47,15 +48,16 @@ struct OrderView: View {
             if let currentProduct = currentProduct, isOrdering {
                 ZStack {
                     Rectangle()
-                        .fill(Color(UIColor.lightGray))
-                        .opacity(0.1)
+                        .fill(Color.black)
+                        .opacity(0.3)
                         .onTapGesture {
-                            isOrdering.toggle()
+                            withAnimation {
+                                isOrdering.toggle()
+                            }
                         }
                     
                     SelectProductView(product: currentProduct, isOrdering: $isOrdering)
                         .background(Color(UIColor.darkGray))
-                        .cornerRadius(10)
                         .padding(10)
                 }
             }

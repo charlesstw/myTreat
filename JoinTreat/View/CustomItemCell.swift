@@ -19,7 +19,7 @@ struct CustomItemCell: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .frame(width: 150, height: 40)
+            .frame(minWidth: 100, idealWidth: 100, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 40, alignment: .center)
             .clipped()
             .cornerRadius(10)
         }

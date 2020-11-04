@@ -23,11 +23,14 @@ struct SelectProductView: View {
                     count = (count - 1) > 0 ? (count - 1) : 0
                 } label: {
                     Text("-")
-                        .frame(width: 44, height: 44)
-                        .background(Color.blue)
+                        .frame(width: 50, height: 50)
+                        .background(Color.clear)
                         .foregroundColor(.white)
                         .font(.system(size: 30))
-                        .cornerRadius(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(Color.white, lineWidth: 1)
+                        )
                 }
                 Spacer()
                 Text("\(count)")
@@ -36,11 +39,14 @@ struct SelectProductView: View {
                     count = count + 1
                 } label: {
                     Text("+")
-                        .frame(width: 44, height: 44)
-                        .background(Color.blue)
+                        .frame(width: 50, height: 50)
+                        .background(Color.clear)
                         .foregroundColor(.white)
                         .font(.system(size: 30))
-                        .cornerRadius(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(Color.white, lineWidth: 1)
+                        )
                 }
                 Spacer()
             }
@@ -55,10 +61,15 @@ struct SelectProductView: View {
                 isOrdering.toggle()
             } label: {
                 Text("確認")
-                .frame(width: 200, height: 40, alignment: .center)
-                .background(Color.orange)
+                .frame(width: 200, height: 44, alignment: .center)
+                .background(Color.clear)
                 .foregroundColor(Color.white)
-                .cornerRadius(5)
+                .border(Color.white, width: 1)
+//                .cornerRadius(5)
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 5)
+//                        .stroke(Color.white, lineWidth: 1)
+//                )
             }
         }
         .padding(10)
