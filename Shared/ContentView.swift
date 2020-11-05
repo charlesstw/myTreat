@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            JoinTreatView().tabItem {
+            JoinTreatView(viewModel: JoinTreatVM()).tabItem {
                 Image(systemName: "photo")
                 Text("被請客")
             }

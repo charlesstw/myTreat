@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct JoinTreatView: View {
+    var viewModel: JoinTreatVM
     var body: some View {
         NavigationView {
-            List(testCampaigns, id: \.id) { campaign in
+            List(viewModel.campaigns, id: \.id) { campaign in
                 JoinTreatCell(campaign: campaign)
             }
             .navigationTitle("點起來")
@@ -20,6 +21,6 @@ struct JoinTreatView: View {
 
 struct JoinTreatView_Previews: PreviewProvider {
     static var previews: some View {
-        JoinTreatView()
+        JoinTreatView(viewModel: JoinTreatVM())
     }
 }

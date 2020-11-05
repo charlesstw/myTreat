@@ -32,7 +32,7 @@ struct OrderView: View {
                             }
                     }
                 }
-                NavigationLink(destination: JoinTreatView()) {
+                NavigationLink(destination: CreateOrderView()) {
                     Text("🛒 購物車: 3")
                         .frame(minWidth: 0,
                                maxWidth: .infinity,

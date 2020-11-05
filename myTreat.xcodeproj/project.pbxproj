@@ -35,6 +35,7 @@
 		56A9E4CA24B867F600E1EFCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9E49F24B867F400E1EFCA /* ContentView.swift */; };
 		56A9E4CB24B867F600E1EFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A9E4A024B867F600E1EFCA /* Assets.xcassets */; };
 		56A9E4CC24B867F600E1EFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A9E4A024B867F600E1EFCA /* Assets.xcassets */; };
+		56C3E5F325540B0000EE5600 /* JoinTreatVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C3E5F225540B0000EE5600 /* JoinTreatVM.swift */; };
 		56D1239825404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		56D1239925404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
@@ -106,6 +107,7 @@
 		56A9E4C024B867F600E1EFCA /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A9E4C424B867F600E1EFCA /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		56A9E4C624B867F600E1EFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56C3E5F225540B0000EE5600 /* JoinTreatVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTreatVM.swift; sourceTree = "<group>"; };
 		56D1239725404DAE00DEA023 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginManager+Injection.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		565BEFE2254AC71C001576D0 /* JoinTreat */ = {
 			isa = PBXGroup;
 			children = (
+				56C3E5ED2554066900EE5600 /* ViewModel */,
 				565BEFE3254AC71C001576D0 /* View */,
 			);
 			path = JoinTreat;
@@ -283,6 +286,14 @@
 				56A9E4C624B867F600E1EFCA /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		56C3E5ED2554066900EE5600 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56C3E5F225540B0000EE5600 /* JoinTreatVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		56D1239625404D9400DEA023 /* Model */ = {
@@ -602,6 +613,7 @@
 				565BF0662551550C001576D0 /* CustomItemCell.swift in Sources */,
 				B5E0C33A2547FDC8004D8CC5 /* ResetPasswordView.swift in Sources */,
 				565BF00C254BA82C001576D0 /* Product.swift in Sources */,
+				56C3E5F325540B0000EE5600 /* JoinTreatVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

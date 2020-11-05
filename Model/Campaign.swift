@@ -85,5 +85,33 @@ let testCampaigns = [
                                                       selections: ["少冰","正常","去冰"])])]),
              sponsor: "小強",
              status: "狀態",
-             description: "小強中樂透點爆他")
+             description: "小強中樂透點爆他"),
+    Campaign(id: "3",
+             name: "小強發大財",
+             store: Store(id: "123",
+                          name: "派克雞排",
+                          tel: "0988778978",
+                          imageUrl: "https://scontent.ftpe12-2.fna.fbcdn.net/v/t1.0-9/49725048_2353585721383546_8886642159852191744_n.jpg?_nc_cat=109&ccb=2&_nc_sid=85a577&_nc_ohc=7fwF4TTvS0IAX_ymlm8&_nc_ht=scontent.ftpe12-2.fna&oh=623887b6dff871d7004230b147dfe2c1&oe=5FCA7B5D",
+                          products:
+                            [Product(id: "1",
+                                     name: "派克雞排",
+                                     desc: "🐔",
+                                     price: 80,
+                                     customItems:
+                                         [CustomItem(name: "辣",
+                                                     selections: ["小辣","辣辣","大辣"]),
+                                          CustomItem(name: "切",
+                                                      selections: ["切","不切"])]),
+                             Product(id: "2",
+                                     name: "派克雞塊",
+                                     desc: "🐥🐥🐥",
+                                     price: 50,
+                                     customItems:
+                                         [CustomItem(name: "辣",
+                                                     selections: ["小辣","辣辣","大辣"]),
+                                          CustomItem(name: "胡椒",
+                                                      selections: ["不加","正常","多"])])]),
+             sponsor: "派克",
+             status: "狀態",
+             description: "派克請吃派克")
 ]
