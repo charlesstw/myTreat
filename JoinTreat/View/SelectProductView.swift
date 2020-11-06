@@ -12,7 +12,15 @@ struct SelectProductView: View {
     var selectProductVM: SelectProductVM
     var shoppingCartVM: ShoppingCartVM
     @Binding var isOrdering: Bool
-    @State var count: Int = 1
+    @State var quantity: Int
+    
+    init(product: Product, selectProductVM: SelectProductVM, shoppingCartVM: ShoppingCartVM, isOrdering: Binding<Bool>) {
+        self.product = product
+        self.selectProductVM = selectProductVM
+        self.shoppingCartVM = shoppingCartVM
+        _isOrdering = isOrdering
+        _quantity = State(initialValue: selectProductVM.product.quantity)
+    }
     
     var body: some View {
         VStack {
@@ -22,8 +30,8 @@ struct SelectProductView: View {
             HStack {
                 Spacer()
                 Button {
-                    count = (count - 1) > 0 ? (count - 1) : 0
-                    selectProductVM.edit(quantity: count)
+                    quantity = (quantity - 1) > 0 ? (quantity - 1) : 0
+                    selectProductVM.edit(quantity: quantity)
                 } label: {
                     Text("-")
                         .frame(width: 50, height: 50)
@@ -36,11 +44,11 @@ struct SelectProductView: View {
                         )
                 }
                 Spacer()
-                Text("\(count)")
+                Text("\(quantity)")
                 Spacer()
                 Button {
-                    count = count + 1
-                    selectProductVM.edit(quantity: count)
+                    quantity = quantity + 1
+                    selectProductVM.edit(quantity: quantity)
                 } label: {
                     Text("+")
                         .frame(width: 50, height: 50)

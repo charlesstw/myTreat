@@ -19,10 +19,17 @@ class SelectProductVM {
     }
     
     func addCustomItem(name: String, selectItem: String) {
-        let addCustomItem = OrderedProduct.CustomItem(name: name, selectItem: selectItem)
+        let addCustomItem = OrderedProduct.CustomItem(name: name, value: selectItem)
         if let index = product.customItems.firstIndex(where: { $0.name == addCustomItem.name }) {
             product.customItems.remove(at: index)
         }
         product.customItems.append(addCustomItem)
-    }        
+    }
+    
+    func getCustomSelectValue(name: String) -> String {
+        if let item = product.customItems.first(where: { $0.name == name }) {
+            return item.value
+        }
+        return ""
+    }
 }

@@ -19,7 +19,7 @@ struct ShoppingCartCell: View {
             }
             HStack {
                 ForEach(product.customItems, id: \.name) { item in
-                    Text("\(item.name):\(item.selectItem)")
+                    Text("\(item.name):\(item.value)")
                 }
                 Spacer()
             }

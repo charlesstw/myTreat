@@ -10,7 +10,14 @@ import SwiftUI
 struct CustomItemCell: View {
     var customItem: Product.CustomItem
     var selectProductVM: SelectProductVM
-    @State var selectedCustomItem = ""
+    @State var selectedCustomItem: String
+    
+    init(customItem: Product.CustomItem, selectProductVM: SelectProductVM) {
+        self.customItem = customItem
+        self.selectProductVM = selectProductVM
+        _selectedCustomItem = State(initialValue: selectProductVM.getCustomSelectValue(name: customItem.name))
+    }
+    
     var body: some View {
         HStack {
             Text("\(customItem.name)")

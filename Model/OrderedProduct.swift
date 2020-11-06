@@ -25,7 +25,7 @@ struct OrderedProduct: Equatable {
     
     struct CustomItem {
         var name: String
-        var selectItem: String
+        var value: String
     }
     
     static func == (lhs: OrderedProduct, rhs: OrderedProduct) -> Bool {

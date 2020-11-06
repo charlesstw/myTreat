@@ -24,4 +24,12 @@ class ShoppingCartVM {
             products.remove(at: index)
         }
     }
+    
+    func getOrderedProduct(product: Product) -> OrderedProduct {
+        var orderedProduct = OrderedProduct(product: product)
+        if let previousOrdered = products.first(where: { $0.id == product.id }) {
+            orderedProduct = previousOrdered
+        }
+        return orderedProduct
+    }
 }

@@ -58,7 +58,7 @@ struct OrderView: View {
                         }
                     SelectProductView(product: currentProduct,
                                       selectProductVM:
-                                        SelectProductVM(orderedProduct: OrderedProduct(product: currentProduct)),
+                                        SelectProductVM(orderedProduct: shoppiongCartVM.getOrderedProduct(product: currentProduct)),
                                       shoppingCartVM: shoppiongCartVM,
                                       isOrdering: $isOrdering)
                         .background(Color(UIColor.darkGray))
