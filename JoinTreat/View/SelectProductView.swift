@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectProductView: View {
     var product: Product
+    var selectProductVM: SelectProductVM
+    var shoppingCartVM: ShoppingCartVM
     @Binding var isOrdering: Bool
     @State var count: Int = 1
     
@@ -21,6 +23,7 @@ struct SelectProductView: View {
                 Spacer()
                 Button {
                     count = (count - 1) > 0 ? (count - 1) : 0
+                    selectProductVM.edit(quantity: count)
                 } label: {
                     Text("-")
                         .frame(width: 50, height: 50)
@@ -37,6 +40,7 @@ struct SelectProductView: View {
                 Spacer()
                 Button {
                     count = count + 1
+                    selectProductVM.edit(quantity: count)
                 } label: {
                     Text("+")
                         .frame(width: 50, height: 50)
@@ -54,11 +58,12 @@ struct SelectProductView: View {
             
             if let customItems = product.customItems {
                 ForEach(customItems, id:\.name) { item in
-                    CustomItemCell(customItem: item)
+                    CustomItemCell(customItem: item, selectProductVM: selectProductVM)
                 }
             }
             Button {
                 isOrdering.toggle()
+                shoppingCartVM.add(product: selectProductVM.product)
             } label: {
                 Text("確認")
                 .frame(width: 200, height: 44, alignment: .center)

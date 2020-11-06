@@ -10,6 +10,7 @@ import SDWebImageSwiftUI
 
 struct OrderView: View {
     var campaign: Campaign
+    var shoppiongCartVM = ShoppingCartVM()
     @State var isOrdering: Bool = false
     @State var currentProduct: Product? = nil
     var body: some View {
@@ -32,8 +33,8 @@ struct OrderView: View {
                             }
                     }
                 }
-                NavigationLink(destination: CreateOrderView()) {
-                    Text("🛒 購物車: 3")
+                NavigationLink(destination: ShoppingCartView(shoppiongCartVM: shoppiongCartVM)) {
+                    Text("🛒 購物車: \(shoppiongCartVM.products.count)")
                         .frame(minWidth: 0,
                                maxWidth: .infinity,
                                minHeight: 44,
@@ -55,8 +56,11 @@ struct OrderView: View {
                                 isOrdering.toggle()
                             }
                         }
-                    
-                    SelectProductView(product: currentProduct, isOrdering: $isOrdering)
+                    SelectProductView(product: currentProduct,
+                                      selectProductVM:
+                                        SelectProductVM(orderedProduct: OrderedProduct(product: currentProduct)),
+                                      shoppingCartVM: shoppiongCartVM,
+                                      isOrdering: $isOrdering)
                         .background(Color(UIColor.darkGray))
                         .padding(10)
                 }
@@ -87,6 +91,6 @@ struct OrderHeaderView: View {
 
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderView(campaign: testCampaigns.first!)
+        OrderView(campaign: testCampaigns.first!, shoppiongCartVM: ShoppingCartVM())
     }
 }

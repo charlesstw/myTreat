@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CustomItemCell: View {
-    var customItem: CustomItem
-    @State private var selectedCustomItem = ""
+    var customItem: Product.CustomItem
+    var selectProductVM: SelectProductVM
+    @State var selectedCustomItem = ""
     var body: some View {
         HStack {
             Text("\(customItem.name)")
@@ -18,6 +19,9 @@ struct CustomItemCell: View {
                     Text(customSelection)
                 }
             }
+            .onChange(of: selectedCustomItem, perform: { (_) in
+                selectProductVM.addCustomItem(name: customItem.name, selectItem: selectedCustomItem)
+            })
             .pickerStyle(SegmentedPickerStyle())
             .frame(minWidth: 100, idealWidth: 100, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 40, alignment: .center)
             .clipped()

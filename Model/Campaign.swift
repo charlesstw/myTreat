@@ -15,6 +15,8 @@ struct Campaign {
     var status: String
     var description: String
     var imageUrl: String? = nil
+    var password: String = ""
+    var participants: [Participant] = []
 }
 
 let testCampaigns = [
@@ -29,29 +31,29 @@ let testCampaigns = [
                                     desc: "黑糖+鮮奶",
                                     price: 100,
                                     customItems:
-                                        [CustomItem(name: "冰塊",
+                                        [Product.CustomItem(name: "冰塊",
                                                      selections: ["正常","去冰"]),
-                                         CustomItem(name: "Size",
+                                         Product.CustomItem(name: "Size",
                                                       selections: ["中","大","特大"])]),
                             Product(id: "2",
                                     name: "四季珍波耶",
                                     desc: "四季春+珍珠+耶果",
                                     price: 50,
                                     customItems:
-                                        [CustomItem(name: "甜度",
+                                        [Product.CustomItem(name: "甜度",
                                                     selections: ["微糖","正常","無糖","少糖"]),
-                                         CustomItem(name: "冰塊",
+                                         Product.CustomItem(name: "冰塊",
                                                      selections: ["滿滿冰","正常","小碎冰"])]),
                             Product(id: "3",
                                     name: "蜂蜜檸檬",
                                     desc: "人生短短幾個秋",
                                     price: 60,
                                     customItems:
-                                        [CustomItem(name: "蜂蜜",
+                                        [Product.CustomItem(name: "蜂蜜",
                                                     selections: ["蜜多","蜜少"]),
-                                         CustomItem(name: "酸度",
+                                         Product.CustomItem(name: "酸度",
                                                      selections: ["一點酸","酸酸","爆酸"]),
-                                         CustomItem(name: "冰塊",
+                                         Product.CustomItem(name: "冰塊",
                                                      selections: ["李冰冰","白冰冰","小小冰"])
                                         ])
                           ]),
@@ -70,24 +72,24 @@ let testCampaigns = [
                                      desc: "OOLONG LATTA",
                                      price: 80,
                                      customItems:
-                                         [CustomItem(name: "甜度",
+                                        [Product.CustomItem(name: "甜度",
                                                      selections: ["微糖","正常","無糖"]),
-                                          CustomItem(name: "冰塊",
+                                         Product.CustomItem(name: "冰塊",
                                                       selections: ["少冰","正常","去冰"])]),
                              Product(id: "2",
                                      name: "山焙黑金",
                                      desc: "SUNBAY DARK ROASTED TEA",
                                      price: 50,
                                      customItems:
-                                         [CustomItem(name: "甜度",
+                                        [Product.CustomItem(name: "甜度",
                                                      selections: ["微糖","正常","無糖"]),
-                                          CustomItem(name: "冰塊",
+                                         Product.CustomItem(name: "冰塊",
                                                       selections: ["少冰","正常","去冰"])])]),
              sponsor: "小強",
              status: "狀態",
              description: "小強中樂透點爆他"),
     Campaign(id: "3",
-             name: "小強發大財",
+             name: "派克吃雞排",
              store: Store(id: "123",
                           name: "派克雞排",
                           tel: "0988778978",
@@ -98,19 +100,25 @@ let testCampaigns = [
                                      desc: "🐔",
                                      price: 80,
                                      customItems:
-                                         [CustomItem(name: "辣",
+                                        [Product.CustomItem(name: "辣",
                                                      selections: ["小辣","辣辣","大辣"]),
-                                          CustomItem(name: "切",
+                                         Product.CustomItem(name: "切",
                                                       selections: ["切","不切"])]),
                              Product(id: "2",
                                      name: "派克雞塊",
                                      desc: "🐥🐥🐥",
                                      price: 50,
                                      customItems:
-                                         [CustomItem(name: "辣",
+                                        [Product.CustomItem(name: "辣",
                                                      selections: ["小辣","辣辣","大辣"]),
-                                          CustomItem(name: "胡椒",
-                                                      selections: ["不加","正常","多"])])]),
+                                         Product.CustomItem(name: "胡椒",
+                                                      selections: ["不加","正常","多"])]),
+                             Product(id: "3",
+                                     name: "派克薯條",
+                                     desc: "🍟🍟🍟",
+                                     price: 50,
+                                     customItems: [])
+                            ]),
              sponsor: "派克",
              status: "狀態",
              description: "派克請吃派克")

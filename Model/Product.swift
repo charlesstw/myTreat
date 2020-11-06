@@ -13,10 +13,13 @@ struct Product {
     var desc: String
     var price: Int
     var imageUrl: String? = nil
-    var customItems: [CustomItem]? = nil
+    var customItems: [CustomItem] = []
+    var additionalItems: [String] = []
+    
+    struct CustomItem {
+        var name: String
+        var selections: [String]
+    }
 }
 
-struct CustomItem {
-    var name: String
-    var selections: [String]
-}
+
