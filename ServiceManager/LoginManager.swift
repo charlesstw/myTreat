@@ -11,11 +11,13 @@ import FirebaseAuth
 
 class LoginManager: NSObject {
     static let shared = LoginManager()
-
+    var firestoreService: FirestoreService = FirestoreService()
     private override init() {
         super.init()
-        let database = RealtimeDBService()
-        database.observeStoreInfoChanged()
+
+        print("[jimy] getStoreFilterByDpo")
+        firestoreService.getStoreFilterByDpo()
+        
     }
     
     func isLogined() -> Bool {

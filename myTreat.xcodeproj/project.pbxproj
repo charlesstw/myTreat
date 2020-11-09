@@ -44,6 +44,7 @@
 		56C3E6202555416F00EE5600 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C3E61F2555416F00EE5600 /* ShoppingCartCell.swift */; };
 		56D1239825404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		56D1239925404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
+		70251C4525591AE2002FE595 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70251C4425591AE2002FE595 /* FirestoreService.swift */; };
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
 		B52E66B7253E776A006B0D03 /* LoginManager+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */; };
 		B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */; };
@@ -121,6 +122,7 @@
 		56C3E61925552E4200EE5600 /* SelectProductVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProductVM.swift; sourceTree = "<group>"; };
 		56C3E61F2555416F00EE5600 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		56D1239725404DAE00DEA023 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		70251C4425591AE2002FE595 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginManager+Injection.swift"; sourceTree = "<group>"; };
 		B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTreatApp+Injection.swift"; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 			children = (
 				B5E3840C253425100070D680 /* LoginManager.swift */,
 				B5E0C34525490409004D8CC5 /* RealtimeDBService.swift */,
+				70251C4425591AE2002FE595 /* FirestoreService.swift */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				B5CEA31924C0389B00620D13 /* SearchBar.swift in Sources */,
 				B5E0C3342547F011004D8CC5 /* RegisterView.swift in Sources */,
 				56C3E5F92554EFD500EE5600 /* Participant.swift in Sources */,
+				70251C4525591AE2002FE595 /* FirestoreService.swift in Sources */,
 				56A9E4C924B867F600E1EFCA /* ContentView.swift in Sources */,
 				565BF013254BADD0001576D0 /* Store.swift in Sources */,
 				565BF005254BA7EB001576D0 /* ProductCell.swift in Sources */,
