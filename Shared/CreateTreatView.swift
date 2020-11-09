@@ -12,7 +12,7 @@ struct CreateTreatView: View {
     @State var searchText: String
     @State var showingLogin: Int? = nil
     var stores = StoreRow.all()
-    @ObservedObject var dbService: RealtimeDBService = RealtimeDBService()
+    @ObservedObject var dbService: FirestoreService = FirestoreService()
     var body: some View {
         
             NavigationView {
@@ -38,7 +38,7 @@ struct CreateTreatView: View {
                         let columns = [GridItem(.flexible()), GridItem(.flexible())]
                         LazyVGrid(columns: columns) {
                             
-                            ForEach(dbService.list) { store in
+                            ForEach(dbService.storelist) { store in
                                 NavigationLink(destination: CreateOrderView()) {
                                     VStack {
                                         WebImage(url: URL(string: store.imageUrl))
