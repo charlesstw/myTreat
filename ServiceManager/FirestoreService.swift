@@ -107,4 +107,18 @@ extension FirestoreService {
         }
     }
 
+    // test更新店家資訊
+    func updateStoreInfo() {
+        let storeRef = db.collection("store").document("CoCo")
+
+        storeRef.updateData([
+            "storeAddress": "Hello World"
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
 }
