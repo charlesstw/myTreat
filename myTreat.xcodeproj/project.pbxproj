@@ -45,6 +45,7 @@
 		56D1239825404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		56D1239925404DAE00DEA023 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1239725404DAE00DEA023 /* Campaign.swift */; };
 		70251C4525591AE2002FE595 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70251C4425591AE2002FE595 /* FirestoreService.swift */; };
+		70251C4F25593C69002FE595 /* StoreBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70251C4E25593C69002FE595 /* StoreBean.swift */; };
 		A39C7731C4F0C2CCC937372C /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF72100DC69196F6E4AAE /* Pods_macOS.framework */; };
 		B52E66B7253E776A006B0D03 /* LoginManager+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */; };
 		B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */; };
@@ -122,6 +123,7 @@
 		56C3E61F2555416F00EE5600 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		56D1239725404DAE00DEA023 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		70251C4425591AE2002FE595 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		70251C4E25593C69002FE595 /* StoreBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBean.swift; sourceTree = "<group>"; };
 		79EB8DA0C511752575C18278 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E66B6253E776A006B0D03 /* LoginManager+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginManager+Injection.swift"; sourceTree = "<group>"; };
 		B52E66C0253E790A006B0D03 /* MyTreatApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTreatApp+Injection.swift"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				56C3E5F82554EFD500EE5600 /* Participant.swift */,
 				565BF00B254BA82C001576D0 /* Product.swift */,
 				565BF012254BADD0001576D0 /* Store.swift */,
+				70251C4E25593C69002FE595 /* StoreBean.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				565BEFE5254AC71C001576D0 /* JoinTreatCell.swift in Sources */,
 				560F3A5B24B869EF00AAC0F6 /* JoinTreatView.swift in Sources */,
 				B52E66C1253E790A006B0D03 /* MyTreatApp+Injection.swift in Sources */,
+				70251C4F25593C69002FE595 /* StoreBean.swift in Sources */,
 				B52E674C253EDA28006B0D03 /* CreateOrderView.swift in Sources */,
 				B52E66C7253E956C006B0D03 /* CustomButton.swift in Sources */,
 				56D1239825404DAE00DEA023 /* Campaign.swift in Sources */,

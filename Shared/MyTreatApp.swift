@@ -17,7 +17,7 @@ struct MyTreatApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(RealtimeDBService())
+            ContentView().environmentObject(FirestoreService())
         }
     }
 }

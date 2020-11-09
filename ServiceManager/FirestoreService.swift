@@ -7,21 +7,7 @@
 
 import Foundation
 import Firebase
-
-enum StoreKey: String {
-    case dpo = "dpo"
-    case storeName = "storeName"
-    case storeAddress = "storeAddress"
-    case imageUrl = "imageUrl"
-}
-
-struct StoreBean: Identifiable {
-    var id = UUID()
-    var dpo: Int
-    var storeName: String
-    var storeAddress: String
-    var imageUrl: String
-}
+import FirebaseFirestoreSwift
 
 class FirestoreService: NSObject, ObservableObject {
     let db = Firestore.firestore()
@@ -38,25 +24,24 @@ class FirestoreService: NSObject, ObservableObject {
             if let error = error {
                     print("Error getting documents: \(error)")
             } else {
-                for document in querySnapshot!.documents {
-                    print("[jimmy]\(document.documentID) => \(document.data())")
+                if let snapshot = querySnapshot {
+                    DispatchQueue.main.async {
+                        self.storelist = self.StoreSnapshotDecoder(snapshot)
+                    }
                 }
             }
         }
     }
     
     func observeStoreChanged() {
+        
         db.collection("store").addSnapshotListener { (querySnapshot, error) in
             if let err = error {
                 print("Error getting documents: \(err)")
             } else {
-                self.storelist.removeAll()
-                var storeList: [StoreBean] = [StoreBean]()
-                for document in querySnapshot!.documents {
-                    let data = self.analys(snapshot: document.data())
-                    storeList.append(data)
+                if let snapshot = querySnapshot {
                     DispatchQueue.main.async {
-                        self.storelist = storeList
+                        self.storelist = self.StoreSnapshotDecoder(snapshot)
                     }
                 }
             }
@@ -65,15 +50,34 @@ class FirestoreService: NSObject, ObservableObject {
 }
 
 extension FirestoreService {
-    func analys(snapshot: [String: Any]) -> StoreBean {
-        // 取出snapshot的值(JSON)
-        let bean = StoreBean(dpo: snapshot["dpo"] as! Int, storeName: snapshot["storeName"] as! String, storeAddress: snapshot["storeAddress"] as! String, imageUrl: snapshot["imageUrl"] as! String)
-        return bean
+    func StoreSnapshotDecoder(_ snapshot: QuerySnapshot) -> [StoreBean] {
+        var resultList: [StoreBean] = []
+        for document in snapshot.documents {
+            
+            let result = Result {
+                try document.data(as: StoreBean.self)
+            }
+            switch result {
+            case .success(let storeBean):
+                if let store = storeBean {
+                    print("storeBean: \(store)")
+                    resultList.append(store)
+                } else {
+                    print("Document does not exist")
+                }
+            case .failure(let error):
+                print("Error decoding city: \(error)")
+            }
+        }
+                
+        return resultList
     }
 }
 
 // for test
 extension FirestoreService {
+    
+    // test指定欲撈取的文件
     func getStoreCoco() {
         let docRef = db.collection("store").document("Coco")
 
@@ -88,6 +92,8 @@ extension FirestoreService {
           }
         }
     }
+    
+    // test撈取資料帶入篩選條件
     func getStoreFilterByDpo() {
         db.collection("store").whereField("dpo", isEqualTo: 0)
             .getDocuments() { (querySnapshot, err) in
@@ -100,4 +106,5 @@ extension FirestoreService {
                 }
         }
     }
+
 }
